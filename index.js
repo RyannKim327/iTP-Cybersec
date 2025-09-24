@@ -1,0 +1,20 @@
+const bot = require("./facebook-page");
+
+const api = bot();
+
+api.setPrefix(":");
+
+api.addCommand("answer", {
+  title: "Flag for CTF",
+  command: "iTP{([\\w\\W]+)}",
+  hidden: true,
+  unprefix: true,
+  any: true,
+});
+
+api.addCommand("alias", {
+  title: "Set nickname",
+  command: "nickname ([\\w\\W]+)",
+  hidden: true,
+  unprefix: true,
+});
