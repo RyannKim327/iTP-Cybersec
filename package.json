@@ -1,18 +1,60 @@
 {
   "name": "cyberserver",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Facebook Messenger bot framework designed for Capture The Flag (CTF) competitions, built with Node.js and Express.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "node --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js",
+    "format": "prettier --write .",
+    "docs": "echo \"Documentation available in docs/ directory\""
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "facebook",
+    "messenger",
+    "bot",
+    "ctf",
+    "capture-the-flag",
+    "cybersecurity",
+    "competition",
+    "webhook",
+    "express",
+    "nodejs"
+  ],
+  "author": "Ryann Kim Sesgundo [MPOP Reverse II]",
   "license": "ISC",
   "type": "commonjs",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/CyberServer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/CyberServer/issues"
+  },
+  "homepage": "https://github.com/your-username/CyberServer#readme",
   "dependencies": {
     "axios": "^1.12.2",
     "express": "^5.1.0",
     "fs": "^0.0.1-security"
-  }
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "nodemon": "^3.0.0"
+  },
+  "files": [
+    "facebook-page/",
+    "src/",
+    "utils/",
+    "index.js",
+    "README.md",
+    "CHANGELOG.md",
+    "docs/"
+  ]
 }
