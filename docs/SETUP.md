@@ -1,6 +1,6 @@
 # Setup Guide
 
-This guide will walk you through setting up the CyberServer Facebook Messenger CTF bot from scratch.
+This guide will walk you through setting up the iTP CyberServer Facebook Messenger CTF bot from scratch.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ Before you begin, ensure you have:
 2. Click "My Apps" → "Create App"
 3. Choose "Business" as the app type
 4. Fill in your app details:
-   - App Name: `CyberServer Bot`
+   - App Name: `iTP CyberServer Bot`
    - App Contact Email: Your email
    - Business Account: Select or create one
 
@@ -114,8 +114,8 @@ Before you begin, ensure you have:
 
 ```bash
 # Clone the repository
-git clone <repository-url>
-cd CyberServer
+git clone https://github.com/RyannKim327/iTP-Cybersec.git
+cd iTP-Cybersec
 
 # Install dependencies
 npm install
@@ -218,9 +218,9 @@ Popular options:
 ### 6.2 Heroku Deployment Example
 
 1. Install Heroku CLI
-2. Create a new Heroku app:
+1. Create a new Heroku app:
 ```bash
-heroku create your-app-name
+heroku create itp-cyberserver-bot
 ```
 
 3. Set environment variables:

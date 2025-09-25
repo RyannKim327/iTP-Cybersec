@@ -1,6 +1,6 @@
 const bot = require("./facebook-page");
 
-const api = bot();
+const api = new bot();
 
 api.setPrefix(":");
 

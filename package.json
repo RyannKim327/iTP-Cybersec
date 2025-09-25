@@ -1,6 +1,6 @@
 {
-  "name": "cyberserver",
-  "version": "1.0.0",
+  "name": "itp-cyberserver",
+  "version": "0.1.0",
   "description": "A Facebook Messenger bot framework designed for Capture The Flag (CTF) competitions, built with Node.js and Express.",
   "main": "index.js",
   "scripts": {
@@ -32,12 +32,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-username/CyberServer.git"
+    "url": "git+https://github.com/RyannKim327/iTP-Cybersec.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/CyberServer/issues"
+    "url": "https://github.com/RyannKim327/iTP-Cybersec/issues"
   },
-  "homepage": "https://github.com/your-username/CyberServer#readme",
+  "homepage": "https://github.com/RyannKim327/iTP-Cybersec#readme",
   "dependencies": {
     "axios": "^1.12.2",
     "express": "^5.1.0",

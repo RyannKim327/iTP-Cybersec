@@ -1,6 +1,6 @@
 # Contributing Guide
 
-Thank you for your interest in contributing to CyberServer! This guide will help you get started with contributing to the project.
+Thank you for your interest in contributing to iTP CyberServer! This guide will help you get started with contributing to the project.
 
 ## Table of Contents
 
@@ -53,11 +53,11 @@ We welcome contributions in these areas:
 
 ```bash
 # Fork the repository on GitHub, then clone your fork
-git clone https://github.com/YOUR_USERNAME/CyberServer.git
-cd CyberServer
+git clone https://github.com/YOUR_USERNAME/iTP-Cybersec.git
+cd iTP-Cybersec
 
 # Add the original repository as upstream
-git remote add upstream https://github.com/ORIGINAL_OWNER/CyberServer.git
+git remote add upstream https://github.com/RyannKim327/iTP-Cybersec.git
 ```
 
 ### 2. Install Dependencies
@@ -450,8 +450,8 @@ Contributors will be recognized in:
 
 ## License
 
-By contributing to CyberServer, you agree that your contributions will be licensed under the same license as the project (ISC License).
+By contributing to iTP CyberServer, you agree that your contributions will be licensed under the same license as the project (ISC License).
 
 ---
 
-Thank you for contributing to CyberServer! Your efforts help make this project better for everyone.
+Thank you for contributing to iTP CyberServer! Your efforts help make this project better for everyone.

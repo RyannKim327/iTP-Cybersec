@@ -2,7 +2,7 @@
 
 ## FacebookPage Class
 
-The `FacebookPage` class is the core of the CyberServer bot framework. It handles webhook management, message routing, and command processing.
+The `FacebookPage` class is the core of the iTP CyberServer bot framework. It handles webhook management, message routing, and command processing.
 
 ### Constructor
 
@@ -12,6 +12,8 @@ const bot = new FacebookPage();
 ```
 
 Creates a new instance of the FacebookPage bot with default configuration.
+
+**Note**: As of version 0.1.0, the bot must be instantiated using the `new` keyword.
 
 ### Properties
 
