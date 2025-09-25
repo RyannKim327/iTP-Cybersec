@@ -10,6 +10,7 @@ api.addCommand("answer", {
   hidden: true,
   unprefix: true,
   any: true,
+  ci: false,
 });
 
 api.addCommand("alias", {
