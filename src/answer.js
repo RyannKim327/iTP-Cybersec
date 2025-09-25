@@ -65,11 +65,11 @@ module.exports = async (api, event, regex) => {
   const senderId = "user1";
 
   // TODO: To filter players
-  const user = users.filter((user) => user.id.includes(senderId));
+  const user = users.filter((user) => user.id.includes(senderId))[0];
 
   // TODO: To check the current state (user1.points + user2.points)
   const points = Object.values(user.players);
-  const combined = points[0] + points[1] + failed;
+  const combined = points[0] + points[1] + user.failed;
   const currentFlag = challenges[combined];
   const players = Object.keys(user.players);
 
