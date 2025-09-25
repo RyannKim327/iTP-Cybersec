@@ -7,6 +7,6 @@ module.exports = async (api, event, regex) => {
 		return api.sendMessage("This account is already registered", event);
 	}
 	users[event.sender.id] = name;
-	api.sendMessage(`The alias ${name} is not set to this account.`, event);
+	api.sendMessage(`The alias ${name} is now set to this account.`, event);
 	await post("users.json", users);
 };
