@@ -39,7 +39,7 @@ const fetch_users = async () => {
 
 module.exports = async (api, event, regex) => {
   const challenges = await fetch_challenges();
-  const users = await fetch_challenges();
+  const users = await fetch_users();
 
   // TODO: To remove all unnecessary whitespaces and convert it to undescore
   const code = event.message.text
