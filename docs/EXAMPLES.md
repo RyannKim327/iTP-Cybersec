@@ -1,6 +1,6 @@
 # Examples and Use Cases
 
-This document provides practical examples of how to use and extend the CyberServer bot framework.
+This document provides practical examples of how to use and extend the iTP CyberServer bot framework.
 
 ## Table of Contents
 
@@ -60,7 +60,7 @@ module.exports = async (api, event, regex) => {
   const info = `
 🤖 CTF Bot Information
 
-📅 Version: 1.0.0
+📅 Version: 0.1.0
 🏆 Active Challenges: 5
 👥 Registered Teams: 12
 ⏰ Competition Ends: December 31, 2025
@@ -746,4 +746,4 @@ class Database {
 module.exports = Database;
 ```
 
-These examples demonstrate the flexibility and extensibility of the CyberServer framework. You can adapt and combine these patterns to create a comprehensive CTF bot that meets your specific requirements.
+These examples demonstrate the flexibility and extensibility of the iTP CyberServer framework. You can adapt and combine these patterns to create a comprehensive CTF bot that meets your specific requirements.

@@ -2,7 +2,7 @@
 
 ## System Overview
 
-CyberServer is a Facebook Messenger bot framework designed specifically for Capture The Flag (CTF) competitions. The architecture follows a modular design pattern with clear separation of concerns.
+iTP CyberServer is a Facebook Messenger bot framework designed specifically for Capture The Flag (CTF) competitions. The architecture follows a modular design pattern with clear separation of concerns.
 
 ## High-Level Architecture
 
@@ -13,7 +13,7 @@ flowchart TB
         GH[GitHub Gist API]
     end
     
-    subgraph "CyberServer Application"
+    subgraph "iTP CyberServer Application"
         subgraph "Web Layer"
             WH[Webhook Endpoint]
             ST[Static File Server]

@@ -1,4 +1,4 @@
-# CyberServer - Facebook Messenger CTF Bot
+# iTP CyberServer - Facebook Messenger CTF Bot
 
 A Facebook Messenger bot framework designed for Capture The Flag (CTF) competitions, built with Node.js and Express.
 
@@ -18,7 +18,7 @@ A Facebook Messenger bot framework designed for Capture The Flag (CTF) competiti
 
 ## 🎯 Overview
 
-CyberServer is a specialized Facebook Messenger bot framework designed for running CTF (Capture The Flag) competitions. It provides automated challenge management, flag validation, team scoring, and real-time communication through Facebook Messenger.
+iTP CyberServer is a specialized Facebook Messenger bot framework designed for running CTF (Capture The Flag) competitions. It provides automated challenge management, flag validation, team scoring, and real-time communication through Facebook Messenger.
 
 ### Key Components
 
@@ -87,8 +87,8 @@ flowchart TD
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd CyberServer
+   git clone https://github.com/RyannKim327/iTP-Cybersec.git
+   cd iTP-Cybersec
    ```
 
 2. **Install dependencies**
@@ -303,7 +303,7 @@ const formatted = markdown('Hello World'); // Returns bold Unicode text
 ## 📁 Project Structure
 
 ```
-CyberServer/
+iTP-Cybersec/
 ├── facebook-page/           # Bot framework
 │   ├── index.js            # Main FacebookPage class
 │   └── web/                # Static web files

@@ -1,6 +1,6 @@
 # Quick Start Guide
 
-Get your CyberServer CTF bot up and running in minutes!
+Get your iTP CyberServer CTF bot up and running in minutes!
 
 ## 🚀 Quick Setup (5 minutes)
 
@@ -11,8 +11,8 @@ Get your CyberServer CTF bot up and running in minutes!
 
 ### 2. Clone and Install
 ```bash
-git clone <repository-url>
-cd CyberServer
+git clone https://github.com/RyannKim327/iTP-Cybersec.git
+cd iTP-Cybersec
 npm install
 ```
 

@@ -7,7 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Updated package name from "cyberserver" to "itp-cyberserver"
+- Changed version from "1.0.0" to "0.1.0" to reflect development status
+- Updated repository URLs to point to "RyannKim327/iTP-Cybersec"
+- Fixed bot instantiation to use `new` keyword: `const api = new bot();`
+- Updated all documentation to reflect new project name and repository
+
+## [0.1.0] - 2025-09-25
+
 ### Added
+
 - Comprehensive developer documentation
 - API reference documentation
 - Setup and configuration guides
@@ -16,13 +27,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Code examples and use cases
 
 ### Changed
+
 - Improved project structure documentation
 - Enhanced README with detailed information
+- Renamed project to iTP CyberServer
+- Updated repository information
 
-## [1.0.0] - 2025-09-25
+## [1.0.0] - 2025-09-25 (Deprecated)
 
 ### Added
-- Initial release of CyberServer Facebook Messenger CTF Bot
+
+- Initial release of iTP CyberServer Facebook Messenger CTF Bot
 - FacebookPage class for bot framework functionality
 - CTF flag validation system with `answer.js` handler
 - GitHub Gist integration for data persistence
@@ -41,6 +56,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Landing page for webhook verification
 
 ### Features
+
 - **Command Management**: Extensible command system with regex patterns
 - **CTF Integration**: Flag validation and challenge progression
 - **Team Support**: Multi-player team management with scoring
@@ -50,6 +66,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Scalability**: Stateless design with external data storage
 
 ### Technical Details
+
 - Node.js and Express.js backend
 - Facebook Graph API v23.0 integration
 - GitHub Gist API for data storage
@@ -60,11 +77,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Environment-based configuration
 
 ### Dependencies
+
 - `express`: ^5.1.0 - Web framework
 - `axios`: ^1.12.2 - HTTP client for API calls
 - `fs`: ^0.0.1-security - File system operations
 
 ### Configuration
+
 - `FB_TOKEN`: Facebook Page Access Token (required)
 - `KEY_TOKEN`: Webhook verification token (optional, defaults to "pagebot")
 - `GIST_TOKEN`: GitHub Personal Access Token (required for data persistence)
@@ -72,8 +91,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `PORT`: Server port (optional, defaults to 3000)
 
 ### File Structure
+
 ```
-CyberServer/
+iTP-Cybersec/
 ├── facebook-page/           # Bot framework
 │   ├── index.js            # Main FacebookPage class
 │   └── web/                # Static web files
@@ -89,35 +109,46 @@ CyberServer/
 ```
 
 ### Known Issues
+
 - None reported in initial release
 
 ### Security Notes
+
 - All sensitive tokens must be stored in environment variables
 - Webhook endpoints include verification token validation
 - Admin functionality requires explicit user ID configuration
 
 ### Author
+
 - Ryann Kim Sesgundo [MPOP Reverse II]
 
 ### License
+
 - ISC License
 
 ---
 
 ## Version History Summary
 
-- **v1.0.0** (2025-09-25): Initial release with core CTF bot functionality
+- **v0.1.0** (2025-09-25): Current development version with updated project structure
+- **v1.0.0** (2025-09-25): Deprecated initial release
 - **v0.x.x** (Development): Pre-release development versions
 
 ## Migration Guide
 
-### From Development to v1.0.0
-This is the initial stable release. No migration required.
+### v.0.0 to v0.1.0
+
+- Update bot instantiation: Change `const api = bot();` to `const api = new bot();`
+- Update package name references from "cyberserver" to "itp-cyberserver"
+- Update repository URLs to new GitHub location
 
 ## Breaking Changes
 
-### v1.0.0
-- Initial release - no breaking changes from previous versions
+### v0.1.0
+
+- **BREAKING**: Bot instantiation now requires `new` keyword
+- **BREAKING**: Package name changed to "itp-cyberserver"
+- Repository location changed to RyannKim327/iTP-Cybersec
 
 ## Deprecation Notices
 
@@ -126,6 +157,7 @@ None at this time.
 ## Support
 
 For support and questions:
+
 - Check the documentation in the `docs/` directory
 - Review examples in `docs/EXAMPLES.md`
 - Follow the setup guide in `docs/SETUP.md`
