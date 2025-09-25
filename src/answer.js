@@ -38,30 +38,38 @@ const fetch_users = async () => {
  */
 
 module.exports = async (api, event, regex) => {
-  // const challenges = await fetch_challenges();
-  // const users = await fetch_challenges()
-  const code = event.message.text.match(regex)[1].toLowerCase();
-  const challenges = [
-    {
-      flag: "flag_sample",
-      next: {
-        title: "Sample Title",
-        description: "Sample Description",
-        hints: ["sample hint"],
-      },
-      due_date: "12-31-2025",
-    },
-  ];
-  const users = [
-    {
-      id: "user1_user2",
-      players: {
-        user1: 1, // -> points
-        user2: 1, // -> points
-      },
-      failed: 0,
-    },
-  ];
+  const challenges = await fetch_challenges();
+  const users = await fetch_challenges();
+
+  // TODO: To remove all unnecessary whitespaces and convert it to undescore
+  const code = event.message.text
+    .match(regex)[1]
+    .toLowerCase()
+    .trim()
+    .replace(/\s/gi, "_");
+
+  // const challenges = [
+  //   {
+  //     flag: "flag_sample",
+  //     next: {
+  //       title: "Sample Title",
+  //       description: "Sample Description",
+  //       hints: ["sample hint"],
+  //     },
+  //     due_date: "12-31-2025",
+  //   },
+  // ];
+  // const users = [
+  //   {
+  //     id: "user1_user2",
+  //     players: {
+  //       user1: 1, // -> points
+  //       user2: 1, // -> points
+  //     },
+  //     failed: 0,
+  //   },
+  // ];
+
   const senderId = event.sender.id;
 
   // TODO: To filter players
