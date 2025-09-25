@@ -40,7 +40,7 @@ const fetch_users = async () => {
 module.exports = async (api, event, regex) => {
   // const challenges = await fetch_challenges();
   // const users = await fetch_challenges()
-  const code = event.messaage.text.match(regex)[1].toLowerCase();
+  const code = event.message.text.match(regex)[1].toLowerCase();
   const challenges = [
     {
       flag: "flag_sample",
@@ -62,7 +62,7 @@ module.exports = async (api, event, regex) => {
       failed: 0,
     },
   ];
-  const senderId = "user1";
+  const senderId = event.sender.id;
 
   // TODO: To filter players
   const user = users.filter((user) => user.id.includes(senderId))[0];
@@ -82,12 +82,12 @@ module.exports = async (api, event, regex) => {
   const due = date(`${currentFlag.due_date} 23:59:59`, "Asia/Manila");
   const current = date();
 
-  if (due.getTime() >= current.getTime()) {
+  if (due.getTime() > current.getTime()) {
     api.sendMessage("You failed this challenge.", event);
     user.failed++;
   } else {
     // TODO: If correct answer for a player.
-    user[senderId]++;
+    user.players[senderId]++;
   }
 
   const next = challenges[combined + 1]["next"];
