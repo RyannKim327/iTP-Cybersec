@@ -5,6 +5,7 @@ A Facebook Messenger bot framework designed for Capture The Flag (CTF) competiti
 ## 📋 Table of Contents
 
 - [Overview](#overview)
+- [Educational Purpose & Legal Notice](#educational-purpose--legal-notice)
 - [Features](#features)
 - [Architecture](#architecture)
 - [Installation](#installation)
@@ -14,6 +15,7 @@ A Facebook Messenger bot framework designed for Capture The Flag (CTF) competiti
 - [Project Structure](#project-structure)
 - [Development](#development)
 - [Contributing](#contributing)
+- [Legal & Policy Information](#legal--policy-information)
 - [License](#license)
 
 ## 🎯 Overview
@@ -26,6 +28,22 @@ iTP CyberServer is a specialized Facebook Messenger bot framework designed for r
 - **CTF Challenge System**: Flag validation and progression management
 - **GitHub Gist Integration**: Data persistence for challenges and user scores
 - **Utility Functions**: Date handling, markdown formatting, and more
+
+## 🎓 Educational Purpose & Legal Notice
+
+**⚠️ IMPORTANT: EDUCATIONAL USE ONLY ⚠️**
+
+This platform is designed **exclusively for educational purposes** in the field of cybersecurity. By using this platform, you agree to:
+
+- **Use all knowledge for educational and defensive purposes only**
+- **Never engage in illegal hacking activities**
+- **Respect privacy and security of others**
+- **Comply with all applicable laws and regulations**
+- **Report any misuse or violations immediately**
+
+**iT Paradigm does not condone, support, or provide tools for any illegal activities. All users are responsible for their actions and must use cybersecurity knowledge ethically and legally.**
+
+For complete legal and policy information, see our [Policy Documentation](#legal--policy-information).
 
 ## ✨ Features
 
@@ -86,17 +104,20 @@ flowchart TD
 ### Setup
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/RyannKim327/iTP-Cybersec.git
    cd iTP-Cybersec
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Configure environment variables**
+
    ```bash
    cp .env.sample .env
    ```
@@ -142,6 +163,7 @@ PORT=3000
 The bot expects two JSON files in your GitHub Gist:
 
 #### `challenges.json`
+
 ```json
 [
   {
@@ -157,6 +179,7 @@ The bot expects two JSON files in your GitHub Gist:
 ```
 
 #### `matches.json`
+
 ```json
 [
   {
@@ -219,25 +242,28 @@ api.addCommand("answer", {
 ### FacebookPage Class
 
 #### Constructor
+
 ```javascript
-const FacebookPage = require('./facebook-page');
+const FacebookPage = require("./facebook-page");
 const bot = new FacebookPage();
 ```
 
 #### Methods
 
 ##### `addCommand(script, command)`
+
 Add a new command handler.
 
 ```javascript
 bot.addCommand("mycommand", {
   title: "My Command",
   command: "mycommand (.*)",
-  description: "Does something cool"
+  description: "Does something cool",
 });
 ```
 
 ##### `setPrefix(prefix)`
+
 Set the command prefix.
 
 ```javascript
@@ -245,6 +271,7 @@ bot.setPrefix(":");
 ```
 
 ##### `sendMessage(message, event, callback)`
+
 Send a message to a user.
 
 ```javascript
@@ -252,6 +279,7 @@ bot.sendMessage("Hello World!", event);
 ```
 
 ##### `sendAttachment(fileType, fileUrl, event, callback)`
+
 Send an attachment.
 
 ```javascript
@@ -259,6 +287,7 @@ bot.sendAttachment("image", "https://example.com/image.png", event);
 ```
 
 ##### `addAdmin(adminID)`
+
 Add an admin user.
 
 ```javascript
@@ -266,6 +295,7 @@ bot.addAdmin("facebook_user_id");
 ```
 
 ##### `listen(callback)`
+
 Start the bot server.
 
 ```javascript
@@ -277,27 +307,30 @@ bot.listen((app) => {
 ### Utility Functions
 
 #### Date Utils (`utils/date.js`)
+
 ```javascript
-const date = require('./utils/date');
+const date = require("./utils/date");
 const now = date(); // Current time in Asia/Manila
-const custom = date('2025-12-31 23:59:59', 'Asia/Manila');
+const custom = date("2025-12-31 23:59:59", "Asia/Manila");
 ```
 
 #### Gist Utils (`utils/gist.js`)
+
 ```javascript
-const { get, post } = require('./utils/gist');
+const { get, post } = require("./utils/gist");
 
 // Read data
-const data = await get('challenges.json');
+const data = await get("challenges.json");
 
 // Write data
-await post('challenges.json', newData);
+await post("challenges.json", newData);
 ```
 
 #### Markdown Utils (`utils/markdown.js`)
+
 ```javascript
-const markdown = require('./utils/markdown');
-const formatted = markdown('Hello World'); // Returns bold Unicode text
+const markdown = require("./utils/markdown");
+const formatted = markdown("Hello World"); // Returns bold Unicode text
 ```
 
 ## 📁 Project Structure
@@ -350,7 +383,7 @@ module.exports = async (api, event, regex) => {
 api.addCommand("mycommand", {
   title: "My Command",
   command: "mycommand (.*)",
-  description: "Echoes user input"
+  description: "Echoes user input",
 });
 ```
 
@@ -363,7 +396,7 @@ Add utility functions in the `utils/` directory:
 module.exports = {
   doSomething: (input) => {
     return input.toUpperCase();
-  }
+  },
 };
 ```
 
@@ -408,7 +441,8 @@ This project is licensed under the ISC License. See the LICENSE file for details
 
 ## 👨‍💻 Author
 
-**Ryann Kim Sesgundo [MPOP Reverse II]**
+**Ryann Kim Sesgundo [MPOP Reverse II]**  
+**IT Paradigm Organization**
 
 ## 🙏 Acknowledgments
 
@@ -416,7 +450,11 @@ This project is licensed under the ISC License. See the LICENSE file for details
 - GitHub Gist API
 - Express.js framework
 - Axios HTTP client
+- Cybersecurity education community
+- Ethical hacking professionals
 
 ---
+
+**Remember:** Cybersecurity education is about building defenses and protecting systems, not attacking them. Use your knowledge responsibly, ethically, and within the bounds of the law.
 
 For more information, visit the [Facebook Developers Documentation](https://developers.facebook.com/docs/messenger-platform/).

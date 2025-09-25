@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - iTP CyberServer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255, 255, 255, 0.05) 10px,
+                rgba(255, 255, 255, 0.05) 20px
+            );
+            animation: slide 20s linear infinite;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(-50px) translateY(-50px); }
+            100% { transform: translateX(50px) translateY(50px); }
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .warning-banner {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1em;
+            border-left: 5px solid #fff;
+            margin: 0;
+        }
+
+        .warning-banner .icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .toc {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 5px solid #3498db;
+        }
+
+        .toc h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .toc ul {
+            list-style: none;
+            columns: 2;
+            column-gap: 30px;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+            break-inside: avoid;
+        }
+
+        .toc a {
+            color: #3498db;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .toc a:hover {
+            background: #3498db;
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .section {
+            margin-bottom: 40px;
+            scroll-margin-top: 20px;
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+            position: relative;
+        }
+
+        .section h2::before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #e74c3c;
+        }
+
+        .section h3 {
+            color: #34495e;
+            font-size: 1.4em;
+            margin: 25px 0 15px 0;
+            padding-left: 15px;
+            border-left: 4px solid #3498db;
+        }
+
+        .section h4 {
+            color: #2c3e50;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+            font-weight: 600;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            text-align: justify;
+            line-height: 1.7;
+        }
+
+        .section ul, .section ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        .section li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border: 1px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #f39c12;
+        }
+
+        .danger-box {
+            background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+            border: 1px solid #f5c6cb;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #e74c3c;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+            border: 1px solid #bee5eb;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #17a2b8;
+        }
+
+        .success-box {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+            border: 1px solid #c3e6cb;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #28a745;
+        }
+
+        .prohibited-list {
+            background: #fff5f5;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .prohibited-list h4 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+
+        .prohibited-list ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .prohibited-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 10px;
+            color: #721c24;
+        }
+
+        .prohibited-list li::before {
+            content: '❌';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .permitted-list {
+            background: #f0fff4;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .permitted-list h4 {
+            color: #28a745;
+            margin-bottom: 15px;
+        }
+
+        .permitted-list ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .permitted-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 10px;
+            color: #155724;
+        }
+
+        .permitted-list li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 15px;
+            border: none;
+            padding: 0;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #3498db;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.2em;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+        }
+
+        .last-updated {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-style: italic;
+            color: #7f8c8d;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 10px;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .toc ul {
+                columns: 1;
+            }
+
+            .section h2 {
+                font-size: 1.5em;
+            }
+
+            .section h3 {
+                font-size: 1.3em;
+            }
+        }
+
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            z-index: 1000;
+        }
+
+        .scroll-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #3498db, #e74c3c);
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Terms and Conditions</h1>
+            <p class="subtitle">iTP CyberServer Educational Platform</p>
+        </div>
+
+        <div class="warning-banner">
+            <span class="icon">⚠️</span>
+            CRITICAL: EDUCATIONAL USE ONLY - This platform is designed exclusively for cybersecurity education and awareness
+        </div>
+
+        <div class="content">
+            <div class="last-updated">
+                <strong>Effective Date:</strong> 09-25-2025 | <strong>Last Updated:</strong> 09-25-2025
+            </div>
+
+            <div class="toc">
+                <h2>📋 Table of Contents</h2>
+                <ul>
+                    <li><a href="#introduction">1. Introduction and Acceptance</a></li>
+                    <li><a href="#educational-purpose">2. Educational Purpose Declaration</a></li>
+                    <li><a href="#user-responsibilities">3. User Responsibilities and Code of Conduct</a></li>
+                    <li><a href="#platform-services">4. Platform Services and Features</a></li>
+                    <li><a href="#user-accounts">5. User Accounts and Data</a></li>
+                    <li><a href="#intellectual-property">6. Intellectual Property Rights</a></li>
+                    <li><a href="#legal-compliance">7. Legal Compliance and Disclaimers</a></li>
+                    <li><a href="#enforcement">8. Enforcement and Violations</a></li>
+                    <li><a href="#third-party">9. Third-Party Services and Links</a></li>
+                    <li><a href="#privacy">10. Privacy and Data Protection</a></li>
+                    <li><a href="#modifications">11. Modifications and Updates</a></li>
+                    <li><a href="#termination">12. Termination</a></li>
+                    <li><a href="#governing-law">13. Governing Law and Dispute Resolution</a></li>
+                    <li><a href="#contact">14. Contact Information</a></li>
+                    <li><a href="#acknowledgment">15. Acknowledgment and Agreement</a></li>
+                </ul>
+            </div>
+
+            <div class="section" id="introduction">
+                <h2>1. Introduction and Acceptance</h2>
+                <p>Welcome to <strong>iTP CyberServer</strong> ("the Platform", "we", "us", or "our"), an educational cybersecurity platform operated by <strong>iT Paradigm</strong> ("the Organization"). By accessing or using our services, including but not limited to our Facebook Messenger bot, CTF challenges, educational materials, and related resources, you ("User", "you", or "your") agree to be bound by these Terms and Conditions ("Terms").</p>
+                
+                <div class="danger-box">
+                    <h4>🚨 IMPORTANT</h4>
+                    <p>This platform is designed exclusively for educational purposes in the field of cybersecurity. By using our services, you acknowledge that you understand and agree to use all provided knowledge, tools, and techniques solely for legitimate educational and defensive security purposes.</p>
+                </div>
+            </div>
+
+            <div class="section" id="educational-purpose">
+                <h2>2. Educational Purpose Declaration</h2>
+                
+                <h3>2.1 Primary Mission</h3>
+                <p>iTP CyberServer is committed to advancing cybersecurity education through:</p>
+                <div class="permitted-list">
+                    <ul>
+                        <li>Ethical hacking education and awareness</li>
+                        <li>Defensive security training</li>
+                        <li>Cybersecurity skill development</li>
+                        <li>Legal penetration testing methodologies</li>
+                        <li>Security research and academic purposes</li>
+                    </ul>
+                </div>
+
+                <h3>2.2 Prohibited Uses</h3>
+                <p>The following activities are strictly prohibited:</p>
+                <div class="prohibited-list">
+                    <h4>Absolutely Forbidden Activities:</h4>
+                    <ul>
+                        <li><strong>Illegal hacking activities</strong> of any kind</li>
+                        <li><strong>Unauthorized access</strong> to systems, networks, or data</li>
+                        <li><strong>Malicious attacks</strong> against any individual, organization, or system</li>
+                        <li><strong>Distribution of malware</strong> or harmful code</li>
+                        <li><strong>Identity theft</strong> or impersonation</li>
+                        <li><strong>Financial fraud</strong> or theft</li>
+                        <li><strong>Harassment, stalking, or intimidation</strong></li>
+                        <li><strong>Violation of privacy rights</strong></li>
+                        <li><strong>Any activity that violates local, state, national, or international laws</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section" id="user-responsibilities">
+                <h2>3. User Responsibilities and Code of Conduct</h2>
+                
+                <h3>3.1 Ethical Use Commitment</h3>
+                <p>By using our platform, you commit to:</p>
+                <div class="success-box">
+                    <ul>
+                        <li>Use all knowledge gained for <strong>educational and defensive purposes only</strong></li>
+                        <li>Respect the <strong>privacy and security</strong> of others</li>
+                        <li>Follow <strong>responsible disclosure practices</strong> for any vulnerabilities discovered</li>
+                        <li>Obtain <strong>proper authorization</strong> before testing security on any systems</li>
+                        <li>Comply with all <strong>applicable laws and regulations</strong></li>
+                        <li>Report any <strong>misuse or violations</strong> to our team immediately</li>
+                    </ul>
+                </div>
+
+                <h3>3.2 Academic Integrity</h3>
+                <p>Users must:</p>
+                <ul>
+                    <li>Not share solutions or flags with other participants during active competitions</li>
+                    <li>Respect intellectual property rights</li>
+                    <li>Give proper attribution when using or referencing our materials</li>
+                    <li>Maintain honesty in all interactions and submissions</li>
+                </ul>
+
+                <h3>3.3 Professional Conduct</h3>
+                <p>Users are expected to:</p>
+                <ul>
+                    <li>Treat all community members with respect and professionalism</li>
+                    <li>Avoid discriminatory, offensive, or inappropriate language</li>
+                    <li>Contribute positively to the learning environment</li>
+                    <li>Seek help through appropriate channels when needed</li>
+                </ul>
+            </div>
+
+            <div class="section" id="platform-services">
+                <h2>4. Platform Services and Features</h2>
+                
+                <h3>4.1 Educational Services</h3>
+                <p>Our platform provides:</p>
+                <div class="info-box">
+                    <ul>
+                        <li><strong>CTF (Capture The Flag) challenges</strong> for skill development</li>
+                        <li><strong>Educational content</strong> on cybersecurity topics</li>
+                        <li><strong>Community interaction</strong> through Facebook Messenger</li>
+                        <li><strong>Progress tracking</strong> and scoring systems</li>
+                        <li><strong>Resource sharing</strong> and documentation</li>
+                    </ul>
+                </div>
+
+                <h3>4.2 Service Availability</h3>
+                <ul>
+                    <li>Services are provided "as is" and "as available"</li>
+                    <li>We reserve the right to modify, suspend, or discontinue services</li>
+                    <li>Maintenance and updates may cause temporary service interruptions</li>
+                    <li>No guarantee of uninterrupted or error-free service</li>
+                </ul>
+            </div>
+
+            <div class="section" id="user-accounts">
+                <h2>5. User Accounts and Data</h2>
+                
+                <h3>5.1 Account Requirements</h3>
+                <ul>
+                    <li>Users must provide accurate and complete information</li>
+                    <li>Users are responsible for maintaining account security</li>
+                    <li>Sharing accounts is prohibited</li>
+                    <li>Users must notify us immediately of any unauthorized access</li>
+                </ul>
+
+                <h3>5.2 Data Collection and Use</h3>
+                <ul>
+                    <li>We collect minimal data necessary for platform functionality</li>
+                    <li>User progress and scores may be stored for educational purposes</li>
+                    <li>We do not sell or share personal data with third parties</li>
+                    <li>See our Privacy Policy for detailed information</li>
+                </ul>
+            </div>
+
+            <div class="section" id="intellectual-property">
+                <h2>6. Intellectual Property Rights</h2>
+                
+                <h3>6.1 Platform Content</h3>
+                <ul>
+                    <li>All platform content, including challenges, documentation, and code, is owned by iT Paradigm</li>
+                    <li>Users may not reproduce, distribute, or create derivative works without permission</li>
+                    <li>Educational use of materials is permitted with proper attribution</li>
+                </ul>
+
+                <h3>6.2 User-Generated Content</h3>
+                <ul>
+                    <li>Users retain ownership of their original contributions</li>
+                    <li>By submitting content, users grant us a license to use it for platform operations</li>
+                    <li>Users must ensure they have rights to any content they submit</li>
+                </ul>
+            </div>
+
+            <div class="section" id="legal-compliance">
+                <h2>7. Legal Compliance and Disclaimers</h2>
+                
+                <h3>7.1 Educational Purpose Limitation</h3>
+                <div class="danger-box">
+                    <h4>🚨 CRITICAL NOTICE</h4>
+                    <p>This platform is designed exclusively for educational purposes. iT Paradigm:</p>
+                    <ul>
+                        <li><strong>DOES NOT CONDONE</strong> any illegal hacking activities</li>
+                        <li><strong>DOES NOT PROVIDE TOOLS</strong> for malicious purposes</li>
+                        <li><strong>DOES NOT SUPPORT</strong> unauthorized access to systems</li>
+                        <li><strong>WILL COOPERATE</strong> with law enforcement regarding any illegal activities</li>
+                        <li><strong>RESERVES THE RIGHT</strong> to report suspicious activities to appropriate authorities</li>
+                    </ul>
+                </div>
+
+                <h3>7.2 Legal Compliance</h3>
+                <p>Users must:</p>
+                <ul>
+                    <li>Comply with all applicable laws in their jurisdiction</li>
+                    <li>Understand that cybersecurity laws vary by location</li>
+                    <li>Seek legal advice if uncertain about the legality of any activities</li>
+                    <li>Respect the terms of service of any third-party systems or services</li>
+                </ul>
+
+                <h3>7.3 Limitation of Liability</h3>
+                <ul>
+                    <li>iT Paradigm is not liable for any misuse of educational materials</li>
+                    <li>Users assume full responsibility for their actions and their consequences</li>
+                    <li>The organization disclaims liability for any damages resulting from platform use</li>
+                    <li>Educational content is provided for informational purposes only</li>
+                </ul>
+            </div>
+
+            <div class="section" id="enforcement">
+                <h2>8. Enforcement and Violations</h2>
+                
+                <h3>8.1 Violation Reporting</h3>
+                <p>Users must report violations by:</p>
+                <ul>
+                    <li>Contacting our support team immediately</li>
+                    <li>Providing detailed information about the violation</li>
+                    <li>Cooperating with any investigation</li>
+                </ul>
+
+                <h3>8.2 Consequences of Violations</h3>
+                <div class="highlight-box">
+                    <p>Violations may result in:</p>
+                    <ul>
+                        <li><strong>Immediate account suspension or termination</strong></li>
+                        <li><strong>Removal from all platform services</strong></li>
+                        <li><strong>Reporting to law enforcement</strong> (for illegal activities)</li>
+                        <li><strong>Legal action</strong> where appropriate</li>
+                        <li><strong>Permanent ban</strong> from future participation</li>
+                    </ul>
+                </div>
+
+                <h3>8.3 Investigation Process</h3>
+                <ul>
+                    <li>We reserve the right to investigate suspected violations</li>
+                    <li>Users must cooperate with investigations</li>
+                    <li>We may suspend services during investigations</li>
+                    <li>Decisions regarding violations are final</li>
+                </ul>
+            </div>
+
+            <div class="section" id="third-party">
+                <h2>9. Third-Party Services and Links</h2>
+                
+                <h3>9.1 External Services</h3>
+                <ul>
+                    <li>Our platform may integrate with third-party services (e.g., Facebook, GitHub)</li>
+                    <li>Users must comply with third-party terms of service</li>
+                    <li>We are not responsible for third-party service availability or policies</li>
+                </ul>
+
+                <h3>9.2 External Links</h3>
+                <ul>
+                    <li>Links to external resources are provided for educational purposes</li>
+                    <li>We do not endorse or control external content</li>
+                    <li>Users access external links at their own risk</li>
+                </ul>
+            </div>
+
+            <div class="section" id="privacy">
+                <h2>10. Privacy and Data Protection</h2>
+                
+                <h3>10.1 Privacy Commitment</h3>
+                <ul>
+                    <li>We respect user privacy and data protection rights</li>
+                    <li>Data collection is limited to platform functionality requirements</li>
+                    <li>See our Privacy Policy for comprehensive details</li>
+                </ul>
+
+                <h3>10.2 Data Security</h3>
+                <ul>
+                    <li>We implement reasonable security measures to protect user data</li>
+                    <li>Users are responsible for maintaining their own data security</li>
+                    <li>Security incidents will be handled according to our incident response procedures</li>
+                </ul>
+            </div>
+
+            <div class="section" id="modifications">
+                <h2>11. Modifications and Updates</h2>
+                
+                <h3>11.1 Terms Updates</h3>
+                <ul>
+                    <li>These Terms may be updated periodically</li>
+                    <li>Users will be notified of significant changes</li>
+                    <li>Continued use constitutes acceptance of updated Terms</li>
+                </ul>
+
+                <h3>11.2 Service Changes</h3>
+                <ul>
+                    <li>Platform features and services may be modified or discontinued</li>
+                    <li>We will provide reasonable notice of significant changes</li>
+                    <li>Users may discontinue use if they disagree with changes</li>
+                </ul>
+            </div>
+
+            <div class="section" id="termination">
+                <h2>12. Termination</h2>
+                
+                <h3>12.1 User Termination</h3>
+                <p>Users may terminate their account at any time by:</p>
+                <ul>
+                    <li>Contacting our support team</li>
+                    <li>Following account deletion procedures</li>
+                    <li>Ceasing use of all platform services</li>
+                </ul>
+
+                <h3>12.2 Platform Termination</h3>
+                <p>We may terminate user access for:</p>
+                <ul>
+                    <li>Violation of these Terms</li>
+                    <li>Illegal or unethical behavior</li>
+                    <li>Misuse of platform resources</li>
+                    <li>Any reason at our sole discretion</li>
+                </ul>
+            </div>
+
+            <div class="section" id="governing-law">
+                <h2>13. Governing Law and Dispute Resolution</h2>
+                
+                <h3>13.1 Applicable Law</h3>
+                <p>These Terms are governed by the laws of [Jurisdiction], without regard to conflict of law principles.</p>
+
+                <h3>13.2 Dispute Resolution</h3>
+                <ul>
+                    <li>Disputes should first be addressed through direct communication</li>
+                    <li>Mediation may be required before legal proceedings</li>
+                    <li>Users consent to jurisdiction in [Jurisdiction] courts</li>
+                </ul>
+            </div>
+
+            <div class="section" id="contact">
+                <h2>14. Contact Information</h2>
+                <div class="contact-info">
+                    <h3>📞 iT Paradigm - iTP CyberServer Team</h3>
+                    <p><strong>Email:</strong> [contact-email]</p>
+                    <p><strong>Website:</strong> [website-url]</p>
+                    <p><strong>Support:</strong> [support-contact]</p>
+                </div>
+            </div>
+
+            <div class="section" id="acknowledgment">
+                <h2>15. Acknowledgment and Agreement</h2>
+                <div class="success-box">
+                    <p>By using iTP CyberServer, you acknowledge that you have:</p>
+                    <ul>
+                        <li><strong>Read and understood</strong> these Terms and Conditions</li>
+                        <li><strong>Agreed to use the platform for educational purposes only</strong></li>
+                        <li><strong>Committed to ethical and legal use</strong> of all provided resources</li>
+                        <li><strong>Understood the consequences</strong> of violating these Terms</li>
+                        <li><strong>Accepted full responsibility</strong> for your actions and their consequences</li>
+                    </ul>
+                </div>
+
+                <div class="highlight-box">
+                    <h4>🎓 Remember</h4>
+                    <p>Cybersecurity education is about building defenses and protecting systems, not attacking them. Use your knowledge responsibly and ethically.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>© 2025 IT Paradigm. All rights reserved.</strong></p>
+            <p><em>This document is part of the iTP CyberServer educational platform and is subject to the terms outlined above.</em></p>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top" id="backToTop">↑</a>
+
+    <script>
+        // Scroll progress indicator
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.offsetHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.getElementById('scrollProgress').style.width = scrollPercent + '%';
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

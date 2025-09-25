@@ -19,3 +19,12 @@ api.addCommand("alias", {
   hidden: true,
   unprefix: true,
 });
+
+api.listen((app) => {
+  app.get("/terms", (req, res) => {
+    res.sendFile(`${__dirname}/web/terms-and-conditions.html`);
+  });
+  app.get("/policy", (req, res) => {
+    res.sendFile(`${__dirname}/web/privacy-policy.html`);
+  });
+});
