@@ -20,7 +20,7 @@ api.addCommand("alias", {
   unprefix: true,
 });
 
-api.addAdmin("24708604612113235");
+api.addAdmin(24708604612113235);
 
 api.listen((app) => {
   app.get("/terms", (req, res) => {
