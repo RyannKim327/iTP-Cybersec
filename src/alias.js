@@ -1,8 +1,10 @@
+const { existsSync } = require("fs");
 const { get, post } = require("../utils/gist");
 
 module.exports = async (api, event, regex) => {
   const name = event.message.text.match(regex)[1];
   const users = await get("users.json");
+  const existing = Objects.values(users);
 
   const forbidden = [
     "admin",
@@ -79,11 +81,27 @@ module.exports = async (api, event, regex) => {
     "game_master",
   ];
 
+  if (forbidden.includes(name.toLowerCase())) {
+    return api.sendMessage(
+      `The nickname ${name} is not allowed to use. Please choose another one.`,
+      event,
+    );
+  }
+
+  const result = existing.filter((v) => v.toLowerCase() === name.toLowerCase());
+
+  if (result) {
+    return api.sendMessage(`The nickname ${name} is already taken.`, event);
+  }
+
   if (users[event.sender.id]) {
     return api.sendMessage("This account is already registered", event);
   }
 
   users[event.sender.id] = name;
   api.sendMessage(`The alias ${name} is now set to this account.`, event);
+  api.sendToAdmin(
+    `The alias ${name} is registed to user id: ${event.sender.id}`,
+  );
   await post("users.json", users);
 };
