@@ -1,4 +1,5 @@
 const bot = require("./facebook-page");
+const { get } = require("./utils/gist");
 
 const api = new bot();
 
@@ -20,7 +21,12 @@ api.addCommand("alias", {
   unprefix: true,
 });
 
-api.addAdmin(24708604612113235);
+(async () => {
+  const admins = get("admins.json");
+  for (const admin of admins) {
+    api.addAdmin(admin);
+  }
+})();
 
 api.listen((app) => {
   app.get("/terms", (req, res) => {
