@@ -1,10 +1,9 @@
-const { existsSync } = require("fs");
 const { get, post } = require("../utils/gist");
 
 module.exports = async (api, event, regex) => {
   const name = event.message.text.match(regex)[1];
   const users = await get("users.json");
-  const existing = Objects.values(users);
+  const existing = Object.values(users);
 
   const forbidden = [
     "admin",
