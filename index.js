@@ -22,7 +22,7 @@ api.addCommand("alias", {
 });
 
 (async () => {
-  const admins = get("admins.json");
+  const admins = await get("admins.json");
   for (const admin of admins) {
     api.addAdmin(admin);
   }
