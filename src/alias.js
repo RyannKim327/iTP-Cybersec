@@ -90,7 +90,7 @@ module.exports = async (api, event, regex) => {
   const result = existing.filter((v) => v.toLowerCase() === name.toLowerCase());
   console.log(result);
 
-  if (!result) {
+  if (result.length > 0) {
     return api.sendMessage(`The nickname ${name} is already taken.`, event);
   }
 
