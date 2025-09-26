@@ -99,10 +99,7 @@ module.exports = async (api, event, regex) => {
   }
 
   users[event.sender.id] = name;
-  api.sendMessage(
-    `The alias \"${name}\" is now settled to this account.`,
-    event,
-  );
+  api.sendMessage(`The alias \"${name}\" has been set to this account.`, event);
   api.sendToAdmin(
     `The alias ${name} is registed to user id: ${event.sender.id}`,
   );
