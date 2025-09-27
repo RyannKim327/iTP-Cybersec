@@ -30,9 +30,11 @@ api.addCommand("alias", {
 
 api.listen((app) => {
   app.get("/terms", (req, res) => {
+    res.setHeader("X-Powered-By", "MPOP Reverse II");
     res.sendFile(`${__dirname}/web/terms-and-conditions.html`);
   });
   app.get("/policy", (req, res) => {
+    res.setHeader("X-Powered-By", "MPOP Reverse II");
     res.sendFile(`${__dirname}/web/privacy-policy.html`);
   });
 });

@@ -532,6 +532,12 @@ class FacebookPage {
       res.sendFile(`${__dirname}/web/index.html`);
     });
 
+    app.get("/keep-alive", (req, res) => {
+      res.status(200).send({
+        "message": "The server is still alive."
+      })
+    })
+
     app.get(this.__webhook, (req, res) => {
       // TODO: To call this webhook, please go to https://developers.facebook.com/apps/your_app_id/messenger/messenger_api_settings/
       // Please note that you also read their terms and conditions to prevent failures
