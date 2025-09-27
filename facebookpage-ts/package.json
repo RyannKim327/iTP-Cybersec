@@ -1,0 +1,21 @@
+{
+  "name": "fbpage-chat",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "test": "tsx test.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@types/node": "^24.5.2",
+    "tsx": "^4.20.6"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}
