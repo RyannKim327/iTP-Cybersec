@@ -533,9 +533,10 @@ class FacebookPage {
     });
 
     app.get("/keep-alive", (req, res) => {
-      res.status(200).send({
+      res.setHeader("X-Powered-By", "MPOP Reverse II");
+      res.status(200).json({
         "message": "The server is still alive."
-      })
+      });
     })
 
     app.get(this.__webhook, (req, res) => {
