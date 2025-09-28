@@ -12,10 +12,11 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "@types/node": "^24.5.2",
+    "axios": "^1.12.2",
     "tsx": "^4.20.6"
   },
   "devDependencies": {
+    "@types/node": "^24.5.2",
     "typescript": "^5.9.2"
   }
 }
